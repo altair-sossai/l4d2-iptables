@@ -76,6 +76,7 @@ We recommend seeking expertise or consulting the documentation of your specific 
 ## References
 - [Hardening SRCDS with iptables rules](https://forums.alliedmods.net/showthread.php?t=151551)
 - [[L4D2] Servers are heavily vulnerable to empty UDP packet DOS attacks #5141](https://github.com/ValveSoftware/Source-1-Games/issues/5141)
+- [DoS-Protect_SM](https://github.com/cravenge/DoS-Protect_SM)
 - [100% CPU usage and low tickrate after hours of server usage #665](https://github.com/SirPlease/L4D2-Competitive-Rework/issues/665)
 
 ## Contributing
