@@ -38,10 +38,10 @@ sudo iptables -A INPUT -p udp --dport 27015 -m length --length 0:32 -j DROP
 sudo iptables -A INPUT -p udp --dport 27015 -m length --length 2521:65535 -j DROP
 
 # Allow specific IP addresses to access the server on UDP port 27015 (Uncomment and modify the IP address)
-# sudo iptables -A INPUT -p udp --dport 27015 -s 200.79.187.230 -m state --state ESTABLISH -j ACCEPT
+# sudo iptables -A INPUT -p udp --dport 27015 -s 200.79.187.230 -m state --state ESTABLISHED -j ACCEPT
 
 # Allow established UDP connections to port 27015
-sudo iptables -A INPUT -p udp --dport 27015 -m state --state ESTABLISH -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 27015 -m state --state ESTABLISHED -j ACCEPT
 
 # Limit incoming UDP connections to port 27015 to prevent DoS attacks
 sudo iptables -A INPUT -p udp --dport 27015 -m state --state NEW -m hashlimit --hashlimit-mode srcip,dstport --hashlimit-name StopDoS --hashlimit 1/s --hashlimit-burst 3 -j ACCEPT
